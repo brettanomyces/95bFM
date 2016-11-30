@@ -1,3 +1,9 @@
 #! /usr/bin/env python3
 
-print('hello world')
+import configparser
+
+config = configparser.ConfigParser()
+config.read('brett.properties')
+print(config.sections())
+print(config['default']['client_id'])
+print(config['default']['client_secret'])
